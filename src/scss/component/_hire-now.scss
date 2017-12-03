@@ -1,0 +1,255 @@
+.box-hire-now {
+    @media (min-width: $screen-sm-min) {
+        margin-top: 40px;
+    }
+
+    .btn-hire-now {
+        margin: 0;
+
+        @include rem("font-size", 16px);
+
+        text-transform: uppercase;
+        background-color: $color-8;
+        color: $color-2;
+        padding: 6px 30px 7px;
+        text-align: center;
+        font-family: $font-NIISansBold;
+
+        @include border-radius(30px);
+
+        display: table;
+        margin: -80px auto 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+        max-width: 300px;
+
+        @media (min-width: $screen-sm-min) {
+            display: block;
+            position: relative;
+            max-width: none;
+
+            @include rem("font-size", 40px);
+
+            margin: 0 auto 0;
+            padding: 15px 20px;
+            color: $color-8;
+            background-color: $color-2;
+
+            @include border-radius(0);
+        }
+    }
+
+    .box-form {
+        padding: 0px 20px 20px;
+
+        @media (min-width: $screen-sm-min) {
+            padding: 20px 80px;
+        }
+
+        .lbl-register {
+            @include rem("font-size", 18px);
+
+            color: $color-8;
+            text-transform: uppercase;
+            margin: 0;
+            font-family: $font-NIISansBold;
+
+            @media (min-width: $screen-sm-min) {
+                float: left;
+                color: $color-1;
+                text-transform: normal;
+                font-family: $font-NIISansRegular;
+
+                @include rem("font-size", 24px);
+            }
+        }
+
+        .li-register {
+            @media (max-width: $screen-xs-max) {
+                margin: 0 -20px;
+                padding: 15px 30px;
+                background-color: $color-2;
+            }
+        }
+
+        .li-client {
+            @media (max-width: $screen-xs-max) {
+                margin-top: 30px;
+            }
+
+            .radio-client {
+                li {
+                    position: relative;
+                    float: left;
+
+                    &:nth-child(2) {
+                        margin-left: 20px;
+                    }
+                }
+
+                input {
+                    @include opacity(0);
+
+                    cursor: pointer;
+                    z-index: 999;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    margin: 0;
+
+                    &:hover {
+                        & ~ .checkmark {
+                            // background-color: rgba($color-3, .3);
+                       
+                        }
+                    }
+
+                    &:checked {
+                        & ~ .checkmark {
+                            background-color: $color-8;
+
+                            &:after {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                .checkmark {
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    height: 15px;
+                    width: 15px;
+
+                    @include border-radius(50%);
+
+                    border: 1px solid $color-3;
+
+                    @media (min-width: $screen-sm-min) {
+                        top: 8px;
+                        border: 1px solid $color-0;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+
+                        @include border-radius(50%);
+
+                        top: 2px;
+                        left: 2px;
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background: $color-3;
+                    }
+                }
+
+                label {
+                    color: $color-3;
+
+                    @include rem("font-size", 18px);
+
+                    font-weight: normal;
+                    margin-left: 20px;
+                    font-family: $font-NIISansLight;
+
+                    @media (min-width: $screen-sm-min) {
+                        @include rem("font-size", 23px);
+
+                        margin-left: 28px;
+                    }
+                }
+            }
+
+            @media (min-width: $screen-sm-min) {
+                float: right;
+            }
+        }
+
+        .li-inputs {
+            width: 100%;
+        }
+
+        .box-left,
+        .box-right {
+            padding: 10px 0 0;
+            width: 100%;
+            display: table;
+
+            @media (min-width: $screen-sm-min) {
+                display: table-cell;
+            }
+        }
+
+        .box-right {
+            padding-bottom: 20px;
+            vertical-align: bottom;
+
+            @media (min-width: $screen-sm-min) {
+                padding-left: 60px;
+            }
+        }
+
+        .box-left {
+            @media (min-width: $screen-sm-min) {
+                width: 70%;
+            }
+        }
+
+        .li-cpf-cnpj {
+            fieldset {
+                @media (min-width: $screen-sm-min) {
+                    width: 95%;
+                }
+            }
+        }
+
+        .li-full-name {
+            clear: both;
+        }
+
+        .btn-enviar {
+            width: 100%;
+
+            @media (max-width: $screen-xs-max) {
+                max-width: 300px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        .radio-telefone {}
+
+        fieldset {
+            border-bottom: 1px solid $color-3;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            border: 0px solid;
+            padding: 0 0 5px;
+            width: 100%;
+            color: $color-3;
+
+            @include rem("font-size", 18px);
+            @include placeholder-color($color-3);
+
+            font-family: $font-NIISansLight;
+
+            &:focus,
+            &:active {
+                outline: none;
+                box-shadow: none;
+            }
+
+            @media (min-width: $screen-sm-min) {
+                @include rem("font-size", 23px);
+            }
+        }
+    }
+}

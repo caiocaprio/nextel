@@ -1,0 +1,12 @@
+.footer {
+    padding: 20px 15px;
+    border-top: 1px solid $color-10;
+
+    .copyright {
+        @include rem("font-size", 10px);
+
+        color: $color-5;
+        text-align: center;
+        margin:0;
+    }
+}

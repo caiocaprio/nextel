@@ -1,0 +1,90 @@
+.all-plans-have {
+    border-top: 1px solid $color-10;
+}
+
+.box-all-plans-have {
+    padding: 30px 30px;
+
+    .all-plans-have-content {
+        max-width: 900px;
+        margin: 0 auto 60px;
+
+        @include cf;
+
+        h2 {
+            @include rem("font-size", 52px);
+
+            color: $color-0;
+            font-family: $font-NIISansRegular;
+            text-transform: uppercase;
+
+            @media (max-width: $screen-xs-max) {
+                @include rem("font-size", 30px);
+
+                color: $color-3;
+                text-align: center;
+                font-family: $font-NIISansLight;
+                max-width: 300px;
+                margin: 60px auto 30px;
+                display: table;
+                float: none;
+            }
+        }
+
+        .benefits-plans {
+            padding-left: 0;
+            padding-right: 0;
+
+            @media (max-width: $screen-xs-max) {
+                @include transform(scaleY(-1));
+            }
+
+            @media (min-width: $screen-sm-min) {
+                padding: 50px 0px 0 20px;
+            }
+
+            .box-benefits {
+                @media (min-width: $screen-sm-min) {
+                    max-width: 170px;
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    max-width: 180px;
+                    clear: both;
+                    margin: 0 auto 30px;
+                    display: block;
+                    float: none;
+
+                    @include transform(scaleY(-1));
+                }
+
+                img {
+                    width: auto;
+                    max-width: 100%;
+                    display: table;
+                    margin: 0 auto;
+                }
+
+                .del-planos {
+                    @include rem("font-size", 15px);
+
+                    padding: 10px 0 0;
+                    color: $color-5;
+                    font-family: $font-NIISansLight;
+                    line-height: 1.1;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .info-legal {
+        clear: both;
+        display: block;
+
+        @include rem("font-size", 10px);
+
+        padding: 10px 0 0;
+        color: $color-5;
+    }
+}

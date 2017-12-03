@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../include/head.html', { "title": "" })
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box-content">
+
+            <!-- home -->
+            @@include('../page/home.html', { "cssClass": "home", "title" : "Vigor"})
+            <!-- /home -->
+            </div>
+
+            <!-- footer -->
+            @@include('../include/footer.html', { "cssClass": "footer" })
+            <!-- /footer -->
+        </div>
+        @@include("../include/scripts.html")
+
+    </body>
+</html>

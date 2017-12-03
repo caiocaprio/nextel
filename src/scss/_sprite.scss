@@ -1,0 +1,24 @@
+$sprite-spacing: 10px;
+
+$sprite-normal-map: sprite-map("normal/*.png", $spacing: $sprite-spacing);
+$sprite-normal: sprite-url( $sprite-normal-map );
+$sprite-normal-path: sprite-path( $sprite-normal-map );
+
+$sprite-retina-map: sprite-map("retina/*.png", $spacing: $sprite-spacing);
+$sprite-retina: sprite-url( $sprite-retina-map );
+$sprite-retina-path: sprite-path( $sprite-retina-map );
+
+/*$sprite-checkout-map: sprite-map("checkout/*.png", $spacing: $sprite-spacing);
+$sprite-checkout: sprite-url( $sprite-checkout-map );*/
+
+.sprite {
+	background-repeat: no-repeat;
+	background-image: $sprite-normal;
+}
+
+/*.sprite-checkout {
+	background-repeat: no-repeat;
+	background-image: $sprite-checkout;
+}*/
+
+@include generate-sprite-class( $normal-map: $sprite-normal-map, $retina-map: $sprite-retina-map );

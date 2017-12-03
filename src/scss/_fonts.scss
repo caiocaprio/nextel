@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'NIISansLight';
+    src: url('../font/niisans/niisans-light.eot');
+    src: url('../font/niisans/niisans-light.eot?#iefix') format('embedded-opentype'),
+         url('../font/niisans/niisans-light.svg#lucida_granderegular') format('svg'),
+         url('../font/niisans/niisans-light.ttf') format('truetype'),
+         url('../font/niisans/niisans-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NIISansRegular';
+    src: url('../font/niisans/niisans-regular.eot');
+    src: url('../font/niisans/niisans-regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/niisans/niisans-regular.svg#lucida_granderegular') format('svg'),
+         url('../font/niisans/niisans-regular.ttf') format('truetype'), 
+         url('../font/niisans/niisans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NIISansBold';
+    src: url('../font/niisans/niisans-bold.eot');
+    src: url('../font/niisans/niisans-bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/niisans/niisans-bold.svg#lucida_granderegular') format('svg'),
+         url('../font/niisans/niisans-bold.ttf') format('truetype'),
+         url('../font/niisans/niisans-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

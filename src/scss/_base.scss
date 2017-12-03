@@ -1,0 +1,260 @@
+* {
+    @include box-sizing($box-model);
+
+    &:after, &:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    &::-moz-selection {
+        background: #000000;
+
+        /* Gecko Browsers */
+        color: #FFFFFF;
+    }
+
+    &::selection {
+        background: #000000;
+
+        /* WebKit/Blink Browsers */
+        color: #FFFFFF;
+
+        /* WebKit/Blink Browsers */
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+    font-size: $font-size-default;
+}
+
+body {
+    background-color: $color-8;
+    font-family: $font-NIISansRegular;
+    font-weight: 300;
+    font-style: normal;
+    color: $color-0;
+    position: relative;
+    overflow-x: hidden;
+    padding: 0 0 0 0;
+}
+
+section {
+    padding: 0;
+}
+
+/*Esconde os spinners do input type-=number*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[placeholder] {
+    text-overflow: ellipsis;
+}
+
+::-moz-placeholder {
+    text-overflow: ellipsis;
+}
+
+/* firefox 19+ */
+input:-moz-placeholder {
+    text-overflow: ellipsis;
+}
+
+/*Remover X para limpar campo input no ie*/
+::-ms-clear {
+    display: none;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    border: 0;
+}
+
+a {
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+
+.transition-default {
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+
+img {
+    border: 0;
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.clear {
+    &--both {
+        clear: both;
+    }
+}
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
+
+.no-wrap {
+    display: inline-block;
+    margin-right: -1000px;
+    overflow: hidden;
+    position: relative;
+
+    /* must be relative */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+
+    /* fit to table cell width */
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.content {
+    width: 100%;
+    max-width: $max-width-content;
+    height: 100%;
+
+    @extend .clearfix;
+
+    margin: 0 auto;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper {
+    width: 100%;
+    display: block;
+
+    > .box-content {
+        position: relative;
+        display: block;
+        height: auto;
+        max-width: none;
+    }
+}
+
+.transition-scale {
+    @include scale(1.15);
+}
+
+.box-tb-c {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.box-tb {
+    display: table;
+    vertical-align: middle;
+}
+
+.container {}
+
+.center-block {
+    float: none;
+}
+
+.break-xs {
+    @media (max-width: $screen-xs-max) {
+        clear: both;
+        display: block;
+    }
+}
+
+.btn-0 {
+    background-color: $color-3;
+    color: $color-8;
+    padding: 14px 30px;
+    text-align: center;
+    outline: none;
+    border: 0;
+    text-transform: uppercase;
+
+    @include transition(all 0.5s cubic-bezier($easeOutExpo));
+
+    @include rem("font-size", 20px);
+    @include border-radius(40px);
+
+    &:hover,
+    &:focus {
+        background-color: $color-2;
+        color: $color-8;
+    }
+}
+
+.btn-1 {
+    background-color: transparent;
+    color: $color-3;
+    padding: 14px 30px;
+    text-align: center;
+    outline: none;
+    border: 0;
+    border: 1px solid $color-3;
+    text-transform: uppercase;
+
+    @include transition(all 0.5s cubic-bezier($easeOutExpo));
+    @include rem("font-size", 20px);
+    @include border-radius(40px);
+
+    &:hover,
+    &:focus {
+        border: 1px solid $color-3;
+        color: $color-3;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        @include rem("font-size", 16px);
+    }
+}
+
